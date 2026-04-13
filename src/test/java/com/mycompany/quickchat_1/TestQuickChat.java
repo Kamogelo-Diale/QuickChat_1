@@ -28,6 +28,11 @@ public class TestQuickChat {
         LogIn log=new LogIn();
         assertTrue(log.checkPassword("Ch&&sec@ke99!"));
       }
+      @Test
+      public void checkPasswordisIncorrect(){
+          LogIn log=new LogIn();
+          assertFalse(log.checkPassword("password"));
+      }
         
     
     

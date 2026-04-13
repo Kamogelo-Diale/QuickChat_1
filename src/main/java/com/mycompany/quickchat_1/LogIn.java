@@ -39,7 +39,7 @@ public class LogIn {
      }
     }
     boolean checkPassword(String password){
-        if (password.length()>=8 && password.contains(".[A-Z][!@#$%^&*].*") ){
+        if (password.length()>=8 && password.contains(".[A-Z].[!@#$%^&*].*") ){
          System.out.println("Password captured successfully");
          return true;
         }
