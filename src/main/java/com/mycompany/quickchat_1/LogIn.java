@@ -9,10 +9,10 @@ import java.util.Scanner;
  * @author Student
  */
 public class LogIn {
-    Scanner input=new Scanner(System.in);
+    
   
     void register(){
-        
+        Scanner input=new Scanner(System.in);
         System.out.println("Enter Username");
          String storedUsername = input.nextLine();
          checkUsername(storedUsername);
@@ -39,7 +39,7 @@ public class LogIn {
      }
     }
     boolean checkPassword(String password){
-        if (password.length()>=8 && password.contains(".[!@#$%^&*].*") ){
+        if (password.length()>=8 && password.contains(".[A-Z][!@#$%^&*].*") ){
          System.out.println("Password captured successfully");
          return true;
         }
@@ -69,6 +69,7 @@ public class LogIn {
        }
    }
    void login(String storedUsername,String storedPassword){
+       Scanner input=new Scanner(System.in);
     String Username;
     String Password;
     String FirstName;
