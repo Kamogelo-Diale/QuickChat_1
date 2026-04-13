@@ -9,9 +9,23 @@ import java.util.Scanner;
  * @author Student
  */
 public class LogIn {
+    Scanner input=new Scanner(System.in);
   
+    void register(){
+        System.out.println("Enter Username");
+         String storedUsername = input.nextLine();
+         checkUsername(storedUsername);
+
+        System.out.println("Enter Password");
+        String storedPassword = input.nextLine();
+        checkPassword(storedPassword);
+        
+        System.out.println("Enter Cellphone number");
+        String storedCellphone = input.nextLine();
+        checkCellphone(storedCellphone);
+}
     boolean checkUsername (String username){
-     if (username.length()== 5 && username.contains("_")){
+     if (username.length()<= 5 && username.contains("_")){
          System.out.println("Username successfully captured");
      return true;    
      } 
@@ -21,7 +35,7 @@ public class LogIn {
      }
     }
     boolean checkPassword(String password){
-        if (password.length()==8 && password.contains(".[!@#$%^&*].*") ){
+        if (password.length()>=8 && password.contains(".[!@#$%^&*].*") ){
          System.out.println("Password captured successfully");
          return true;
         }
@@ -41,5 +55,8 @@ public class LogIn {
             return false;
         }
     }
-    
+   public String registerUser(String storedUsername,String storedPassword){
+      
+   }
+ 
 }
