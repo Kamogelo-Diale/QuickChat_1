@@ -24,7 +24,9 @@ public class LogIn {
         System.out.println("Enter Cellphone number");
         String storedCellphone = input.nextLine();
         checkCellphone(storedCellphone);
+        
         registerUser(storedUsername,storedPassword);
+        login(storedUsername,storedPassword);
 }
     boolean checkUsername (String username){
      if (username.length()<= 5 && username.contains("_")){
@@ -60,12 +62,34 @@ public class LogIn {
    public String registerUser(String storedUsername,String storedPassword){
        if (checkPassword(storedPassword) && checkUsername(storedUsername) ){ 
          return "Successfully Registered";
+         
        }
        else{
            return "Incorrect Username or Password";
        }
    }
-   public boolean loginUser(){
-       return null;
+   void login(String storedUsername,String storedPassword){
+    String Username;
+    String Password;
+    String FirstName;
+    String LastName;
+    
+    System.out.println("Enter your First name");
+    FirstName=input.nextLine();
+    
+    System.out.println("Enter your Last Name");
+    LastName=input.nextLine();
+    
+    System.out.println("Enter Username");
+    Username =input.nextLine();
+    
+    System.out.println("Enter Password");
+    Password=input.nextLine();
+    
+    loginUser(Username,storedUsername,Password,storedPassword);
+}
+   public boolean loginUser(String Username,String storedUsername,String Password, String storedPassword){
+       
+       return Username.matches(storedUsername)&& Password.matches(storedPassword);
    }
 }
