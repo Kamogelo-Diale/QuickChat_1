@@ -33,7 +33,14 @@ public class TestQuickChat {
           LogIn log=new LogIn();
           assertFalse(log.checkPassword("password"));
       }
-        
+      public void checkCellphoneisCorrect(){
+       LogIn log = new LogIn();
+       assertTrue(log.checkCellphone("+27838968976"));
+}
+      public void checkCellphoneisIncorrect(){
+          LogIn log = new LogIn();
+          assertFalse(log.checkCellphone("08966553"));
+      } 
     
     
     
