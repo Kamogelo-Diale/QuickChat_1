@@ -56,7 +56,7 @@ public class LogIn {
         }
     }
    public String registerUser(String storedUsername,String storedPassword){
-      
+      return null;
    }
  
 }
