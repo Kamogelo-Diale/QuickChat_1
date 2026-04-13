@@ -12,6 +12,7 @@ public class LogIn {
     Scanner input=new Scanner(System.in);
   
     void register(){
+        
         System.out.println("Enter Username");
          String storedUsername = input.nextLine();
          checkUsername(storedUsername);
@@ -23,6 +24,7 @@ public class LogIn {
         System.out.println("Enter Cellphone number");
         String storedCellphone = input.nextLine();
         checkCellphone(storedCellphone);
+        registerUser(storedUsername,storedPassword);
 }
     boolean checkUsername (String username){
      if (username.length()<= 5 && username.contains("_")){
@@ -63,5 +65,7 @@ public class LogIn {
            return "Incorrect Username or Password";
        }
    }
- 
+   public boolean loginUser(){
+       return null;
+   }
 }
