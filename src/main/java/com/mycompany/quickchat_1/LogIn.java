@@ -56,7 +56,12 @@ public class LogIn {
         }
     }
    public String registerUser(String storedUsername,String storedPassword){
-      return null;
+       if (checkPassword(storedPassword) && checkUsername(storedUsername) ){ 
+         return "Successfully Registered";
+       }
+       else{
+           return "Incorrect Username or Password";
+       }
    }
  
 }
